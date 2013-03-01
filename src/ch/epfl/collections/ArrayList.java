@@ -102,8 +102,13 @@ public class ArrayList<T> implements List<T> {
 			public void remove(){
 				if(pos == 0)
 					throw new IllegalStateException("next() n'a pas été appelé!");
+				else if(size-1 == 0){
+					array = new Object[1];
+					array[0] = null;
+					size--;
+				}
 				else{
-					System.arraycopy(array, pos, array, pos-1, size - 1 - pos - 1);
+					System.arraycopy(array, pos, array, pos-1, size-1-pos-1);
 					array[--size] = null;
 				}
 			}
@@ -113,7 +118,7 @@ public class ArrayList<T> implements List<T> {
 	@Override
 	public String toString() {
 	    StringBuilder b = new StringBuilder("[");
-	    for (Iterator<T> i = iterator(); i.hasNext();) {
+	    for(Iterator<T> i = iterator(); i.hasNext();) {
 	    	b.append(i.next());
 	        if (i.hasNext())
 	            b.append(",");

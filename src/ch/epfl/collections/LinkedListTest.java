@@ -43,5 +43,24 @@ public class LinkedListTest {
 		assertEquals(", my name", a.get(1));
 		i.next();
 	}
+	
+	@Test
+	public void testGeneral2(){
+		LinkedList<String> a = new LinkedList<String>();
+		a.add("Test 1");
+		a.add("Test 2");
+		a.add("Test 3");
+		a.set(2, "Test 4");
+		assertEquals("Test 4", a.get(2));
+		a.remove(0);
+		assertEquals("Test 2", a.get(0));
+		a.remove(1);
+		
+		for(Iterator<String> i = a.iterator(); i.hasNext();){
+			assertEquals("Test 2", i.next());
+			i.remove();
+		}
+		assertEquals(true, a.isEmpty());
+	}
 
 }

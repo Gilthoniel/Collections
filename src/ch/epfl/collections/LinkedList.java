@@ -76,7 +76,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        return (T)nodeAtIndex(index).value;
+        return nodeAtIndex(index).value;
     }
 
     @Override

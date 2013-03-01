@@ -53,5 +53,24 @@ public class ArrayListTest {
 		
 		assertEquals("[Hello, my name, is ,Gaylor]", a.toString());
 	}
+	
+	@Test
+	public void testGeneral2(){
+		ArrayList<String> a = new ArrayList<String>();
+		a.add("Test 1");
+		a.add("Test 2");
+		a.add("Test 3");
+		a.set(2, "Test 4");
+		assertEquals("Test 4", a.get(2));
+		a.remove(0);
+		assertEquals("Test 2", a.get(0));
+		a.remove(1);
+		
+		for(Iterator<String> i = a.iterator(); i.hasNext();){
+			assertEquals("Test 2", i.next());
+			i.remove();
+		}
+		assertEquals(true, a.isEmpty());
+	}
 
 }
