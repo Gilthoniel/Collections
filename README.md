@@ -8,3 +8,6 @@
 	constitué de nodes.  
 	* Ensuite, modification du code pour rendre les listes générique, de type List<T>.
 2. Deuxième étape, les ensembles
+	* Création d'une classe IntTreeSet pour prendre en main les ensemble
+	* Généralisation de la classe pour tout type implémentant Comparable
+	* Mise en place de l'itérateur
