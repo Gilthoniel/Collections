@@ -4,7 +4,7 @@ package ch.epfl.collections.set;
  * Interface for basic sets.
  * @author Michel Schinz
  */
-public interface Set<E extends Comparable<E>> extends Iterable<E>{
+public interface Set<E> extends Iterable<E>{
     /**
      * Check whether the set is empty.
      * @return <code>true</code> if and only if the set is empty.
