@@ -11,3 +11,6 @@
 	* Création d'une classe IntTreeSet pour prendre en main les ensemble
 	* Généralisation de la classe pour tout type implémentant Comparable
 	* Mise en place de l'itérateur
+3. Troisième étape, les tableaux associatifs
+	* Modifications des classes d'ensembles
+	* Deux classes ainsi créées : TreeMap et HashMap
